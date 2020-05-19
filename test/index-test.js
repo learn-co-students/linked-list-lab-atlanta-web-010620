@@ -90,28 +90,31 @@ describe('#insertNodeAt', function() {
     let secondNode = {name: 'sam', next: 'asnan'}
     let newNode = {name: 'jill', next: ''}
     let lastNode = {name: 'charlie', next: null}
-    let collection = {rkjasj: secondNode,
-      asnan: lastNode,
-      whana: firstNode,
-      ajhsak: newNode}
+    let collection = {
+        whana: firstNode,
+        rkjasj: secondNode,
+        asnan: lastNode,
+        ajhsak: newNode}
     let linkedList = 'whana'
     insertNodeAt(1, 'ajhsak', linkedList, collection)
     expect(newNode.next).toEqual('rkjasj')
   })
 
-  it("should set the next property of the node previous to the inserted node", function() {
+it("should set the next property of the node previous to the inserted node", function() {
     let firstNode = {name: 'susie', next: 'rkjasj'}
     let secondNode = {name: 'sam', next: 'asnan'}
     let newNode = {name: 'jill', next: ''}
     let lastNode = {name: 'charlie', next: null}
-    let collection = {rkjasj: secondNode,
-      asnan: lastNode,
-      whana: firstNode,
-      ajhsak: newNode}
+    let collection = {
+        whana: firstNode,
+        rkjasj: secondNode,
+        asnan: lastNode,
+        ajhsak: newNode
+    }
     let linkedList = 'whana'
     insertNodeAt(1, 'ajhsak', linkedList, collection)
     expect(firstNode.next).toEqual('ajhsak')
-  })
+})
 
   it("should insert the node at the provided index, while maintaining order of all the other nodes", function() {
     let firstNode = {name: 'susie', next: 'rkjasj'}
